@@ -1,2 +1,12 @@
 First commit
 Second commit
+
+To delete commits with errors from remote repo:
+1. "git pull" to get the latest source.
+2. "git branch old_master" to create backup of the master branch.
+3. "git push origin old_master:old_master" to backup current master branch.
+4. "git reset --hard 75c96" to reset to a previous commit.
+5. Go to Github and go to "Admin" to switch default branch to one that is not "master".
+6. "git push origin :master" to delete remote master branch.
+7. "git push origin master" to create new master branch according to local repo.
+8. Over.
